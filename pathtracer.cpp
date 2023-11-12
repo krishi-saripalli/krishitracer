@@ -74,6 +74,7 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
 
         float probRussian = 0.90f;
 
+        // russian roulette
         if (probRussian > randomFloat()) {
 
 
@@ -88,13 +89,13 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
             Vector3f w_o = std::get<0>(newDirection);
             float pdf = std::get<1>(newDirection);
 
-             // transform w_o if it is not a mirror reflection
-            if (brdfType != BRDF_MIRROR) {
+             // transform w_o if it is not a reflection/refraction
+            if (brdfType != BRDF_MIRROR && brdfType != BRDF_DIELECTRIC) {
                 w_o = rotateHemisphereMatrix(objNormal)*w_o;
             }
 
             // if sampled ray does NOT go into the surface, we recurse, otherwise we terminate our ray
-            if (w_o.dot(objNormal) > 0.0f) {
+
                 Vector3f brdf = BRDF(brdfType,w_i,w_o,objNormal,scene.m_globalData,material);
 
                  //trace new ray recursivley
@@ -103,10 +104,6 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
 
                 // Approximate indirect lighting contribution to integral
                  L_total += (outgoingRadiance.cwiseProduct(brdf)) * (-w_i).dot(objNormal)*(1.0f/(pdf*probRussian));
-
-            }
-
-
 
 
         }
@@ -117,6 +114,7 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
 }
 
 
+// Tone map using the Reinhard operator
 void PathTracer::toneMap(QRgb *imageData, std::vector<Vector3f> &intensityValues) {
     for(int y = 0; y < m_height; ++y) {
         for(int x = 0; x < m_width; ++x) {
