@@ -151,10 +151,7 @@ std::tuple<Vector3f,float> sampleMirrorDir(Vector3f w_i, Vector3f normal) {
 // Returns a refracted or reflected ray based on Snell's Law and Schlicks Approx.
 std::tuple<Vector3f,float> sampleDielectricDir(Vector3f w_i, Vector3f normal, float ior) {
 
-    // argument to the square root for finding cos theta out. We check for real or complex solutions:
-
-    float cos_theta_in = std::clamp(w_i.dot(normal),-1.f,1.f);
-
+    float cos_theta_in = w_i.dot(normal);
     float omega_i, omega_o;
     Vector3f n;
 
@@ -164,15 +161,12 @@ std::tuple<Vector3f,float> sampleDielectricDir(Vector3f w_i, Vector3f normal, fl
         omega_o = ior;
         cos_theta_in = -cos_theta_in;
         n = normal;
-
-
     }
     //object into air
     else {
         omega_i = ior;
         omega_o = 1.0f;
         n = -normal;
-
     }
 
     float ratio = (omega_i/omega_o);
@@ -183,19 +177,26 @@ std::tuple<Vector3f,float> sampleDielectricDir(Vector3f w_i, Vector3f normal, fl
         return sampleMirrorDir(w_i, normal);
     }
 
+    //schlicks approximation for probability of reflectance
+    float prob_reflect = schlick(cos_theta_in,omega_i,omega_o);
+
+    //reflect
+    if (randomFloat() < prob_reflect) {
+        return std::tuple<Vector3f,float>(reflectVec3(w_i,normal).normalized(),prob_reflect);
+    }
+
+    //refract
     float cos_theta_out = float(sqrt(argument));
-    Vector3f w_o = ratio*w_i + (ratio*cos_theta_in - cos_theta_out)*n;
+    Vector3f direction = ratio*w_i + (ratio*cos_theta_in - cos_theta_out)*n;
+    float prob_refract = 1.0f - prob_reflect;
 
-    Vector3f direction = w_o;
-    float prob = 1.0f;
-
-    return std::tuple<Vector3f,float>(direction,prob);
+    return std::tuple<Vector3f,float>(direction.normalized(),prob_refract);
 
 }
 
 
 // Returns the BRDF Vector quantity given a BRDF type
-Vector3f BRDF( const BRDF_TYPE brdfType , const Vector3f w_i, const Vector3f w_o, const Vector3f normal, const CS123SceneGlobalData& sceneData, const tinyobj::material_t& mat) {
+Vector3f BRDF( const BRDF_TYPE brdfType , const Vector3f w_i, const Vector3f w_o, const Vector3f normal, const float prob, const CS123SceneGlobalData& sceneData, const tinyobj::material_t& mat) {
     const tinyobj::real_t *d = mat.diffuse;
     const tinyobj::real_t *s = mat.specular;
     Vector3f reflection = reflectVec3(w_i,normal);
@@ -214,7 +215,7 @@ Vector3f BRDF( const BRDF_TYPE brdfType , const Vector3f w_i, const Vector3f w_o
         return (1.0f/reflection.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
 
       case BRDF_DIELECTRIC:
-         return (1.0f/w_o.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
+         return prob*(1.0f/w_o.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
       default:
         return Vector3f(d[0],d[1],d[2])/M_PI;
 

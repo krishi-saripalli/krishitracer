@@ -49,14 +49,14 @@ Vector3f PathTracer::tracePixel(int x, int y, const Scene& scene, const Matrix4f
            r = r.transform(invViewMatrix);
 
            //trace ray
-           total_radiance += radiance(r,scene);
+           total_radiance += radiance(r,scene,0);
        }
       return total_radiance/K;
 }
 
 // Traces Ray and return whether there was a intersection and the corresponding IntersectionInfo
 // Computes the outgoing radiance at x along -w (reflected incoming ray)
-Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
+Vector3f PathTracer::radiance(const Ray& r, const Scene& scene, int depth ) {
 
     IntersectionInfo intersectionInfo;
     Ray ray(r);
@@ -74,8 +74,8 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
 
         float probRussian = 0.90f;
 
-        // russian roulette
-        if (probRussian > randomFloat()) {
+        // russian roulette (but we bounce at least 1 time)
+        if (probRussian > randomFloat() || depth == 0) {
 
 
             //get BRDF, w_i, object normal and sample next direction
@@ -96,11 +96,11 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene ) {
 
             // if sampled ray does NOT go into the surface, we recurse, otherwise we terminate our ray
 
-                Vector3f brdf = BRDF(brdfType,w_i,w_o,objNormal,scene.m_globalData,material);
+                Vector3f brdf = BRDF(brdfType,w_i,w_o,objNormal,pdf,scene.m_globalData,material);
 
                  //trace new ray recursivley
                 Ray newRay = Ray(intersectionInfo.hit,w_o);
-                Vector3f outgoingRadiance = radiance(newRay,scene);
+                Vector3f outgoingRadiance = radiance(newRay,scene,depth + 1);
 
                 // Approximate indirect lighting contribution to integral
                  L_total += (outgoingRadiance.cwiseProduct(brdf)) * (-w_i).dot(objNormal)*(1.0f/(pdf*probRussian));

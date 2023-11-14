@@ -21,7 +21,7 @@ private:
 
 
     void toneMap(QRgb *imageData, std::vector<Vector3f> &intensityValues);
-    Vector3f radiance(const Ray& r, const Scene& scene);
+    Vector3f radiance(const Ray& r, const Scene& scene, int depth);
     Vector3f tracePixel(int x, int y, const Scene &scene, const Matrix4f &invViewMatrix);
     std::tuple<bool,IntersectionInfo> traceRay(const Ray& r, const Scene &scene);
 };

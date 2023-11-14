@@ -47,4 +47,10 @@ inline Matrix3f rotateHemisphereMatrix(Vector3f normal) {
 
 }
 
+// Schlick's approximation for the probability of reflectance
+inline float schlick(float cosine, float omega_i, float omega_o) {
+    float r0 = pow((omega_i - omega_o) / (omega_i + omega_o),2);
+    return r0 + (1 - r0) * pow((1 - cosine), 5);
+}
+
 #endif // UTILS_H
