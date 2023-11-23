@@ -67,10 +67,11 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene, int depth ) {
         const Triangle *tri = static_cast<const Triangle *>(intersectionInfo.data);
         const tinyobj::material_t& material = tri->getMaterial();
         const tinyobj::real_t *e = material.emission;
+        BRDF_TYPE brdfType = BRDFType(material);
 
-
-        Vector3f L_emmisive = Vector3f(e[0],e[1],e[2]);
-        L_total += L_emmisive;
+        if (brdfType == BRDF_MIRROR || brdfType == BRDF_DIELECTRIC || tri->isEmissive()) {
+             L_total += Vector3f(e[0],e[1],e[2]);
+        }
 
         float probRussian = 0.90f;
 
@@ -79,33 +80,32 @@ Vector3f PathTracer::radiance(const Ray& r, const Scene& scene, int depth ) {
 
 
             //get BRDF, w_i, object normal and sample next direction
-            BRDF_TYPE brdfType = BRDFType(material);
-            Vector3f w_i = r.d; //neg
-            Vector3f objNormal = intersectionInfo.object->getNormal(intersectionInfo);
-            std::tuple<Vector3f,float> newDirection = sampleNextDir(brdfType,scene.m_globalData, material,w_i,objNormal);
-
-
-
+            Vector3f w_i = r.d;
+            Vector3f normal = intersectionInfo.object->getNormal(intersectionInfo);
+            std::tuple<Vector3f,float> newDirection = sampleNextDir(brdfType,scene.m_globalData, material,w_i,normal);
             Vector3f w_o = std::get<0>(newDirection);
             float pdf = std::get<1>(newDirection);
 
              // transform w_o if it is not a reflection/refraction
             if (brdfType != BRDF_MIRROR && brdfType != BRDF_DIELECTRIC) {
-                w_o = rotateHemisphereMatrix(objNormal)*w_o;
+                w_o = rotateHemisphereMatrix(normal)*w_o;
             }
 
-            // if sampled ray does NOT go into the surface, we recurse, otherwise we terminate our ray
 
-                Vector3f brdf = BRDF(brdfType,w_i,w_o,objNormal,pdf,scene.m_globalData,material);
+            Vector3f brdf = BRDF(brdfType,w_i,w_o,normal,pdf,scene.m_globalData,material);
 
-                 //trace new ray recursivley
-                Ray newRay = Ray(intersectionInfo.hit,w_o);
-                Vector3f outgoingRadiance = radiance(newRay,scene,depth + 1);
+            // Direct lighting
+              if (brdfType != BRDF_MIRROR && brdfType != BRDF_DIELECTRIC) {
+              L_total +=  directLighting(scene, w_i, intersectionInfo.hit, normal, brdf);
 
-                // Approximate indirect lighting contribution to integral
-                 L_total += (outgoingRadiance.cwiseProduct(brdf)) * (-w_i).dot(objNormal)*(1.0f/(pdf*probRussian));
+              }
 
+             //trace new ray recursivley
+            Ray newRay = Ray(intersectionInfo.hit,w_o);
+            Vector3f outgoingRadiance = radiance(newRay,scene,depth + 1);
 
+            // Indirect lighting
+            L_total += (outgoingRadiance.cwiseProduct(brdf)) * (-w_i).dot(normal)*(1.0f/(pdf*probRussian));
         }
 
     }

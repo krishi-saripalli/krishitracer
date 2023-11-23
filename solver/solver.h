@@ -11,6 +11,7 @@
 
 #include <Eigen/Dense>
 #include <random>
+#include "scene/scene.h"
 #include "util/CS123SceneData.h"
 #include "util/tiny_obj_loader.h"
 #include "util/utils.h"
@@ -56,6 +57,7 @@ std::tuple<Vector3f,float> sampleDiffuseDir(const Vector3f w_i, const Vector3f n
 
     float prob = (1.0f/M_PI) * abs(w_i.dot(normal));
 
+
     float random_f = randomFloat();
     float random_f_2 = randomFloat();
 
@@ -65,6 +67,8 @@ std::tuple<Vector3f,float> sampleDiffuseDir(const Vector3f w_i, const Vector3f n
     float x = sin(theta)*cos(phi);
     float y = cos(theta);
     float z = sin(theta)*sin(phi);
+
+
 
 
     direction = Vector3f(x,y,z).normalized();
@@ -90,12 +94,8 @@ std::tuple<Vector3f,float> samplePhongDir(const Vector3f w_i, const Vector3f nor
     //diffuse contribution
     if (random_f > kd) {
 
-
         //cosine weighted pdf
-        prob = (1.0f/M_PI)* abs(w_i.dot(normal));
-
-        //sample angle based on pdf
-        theta = acos(sqrt(random_f_2)), phi = 2.0f*M_PI*random_f_3;
+        return sampleDiffuseDir(w_i,normal);
 
 
     }
@@ -250,6 +250,42 @@ std::tuple<Vector3f,float> sampleNextDir(BRDF_TYPE brdfType, const CS123SceneGlo
 
 
 }
+
+Vector3f directLight(Triangle* light, IntersectionInfo i, Vector3f w_i, Vector3f w_o, Vector3f normal, Vector3f brdf) {
+    float area = light->getArea();
+    float cos1 =  std::clamp((w_o.dot(normal)),0.0f,1.0f);
+    float cos2 =  std::clamp((-w_o.dot(light->getNormal(i))),0.0f,1.0f);
+    const tinyobj::material_t& material = light->getMaterial();
+    const tinyobj::real_t *e = material.emission;
+    Vector3f emmision = Vector3f(e[0],e[1],e[2]);
+
+
+
+    return emmision.cwiseProduct(brdf)*area*cos1*cos2*(1.0f/(w_o).squaredNorm());
+
+}
+
+Vector3f directLighting(const Scene& scene, Vector3f w_i, Vector3f p, Vector3f normal, Vector3f brdf ) {
+    const std::vector<Triangle*> lights = scene.getEmissives();
+    Vector3f L_direct = Vector3f(0.0f,0.0f,0.0f);
+    for (Triangle* light : lights) {
+
+        Vector3f sample = sampleTriangle(light);
+        Vector3f w_o = (sample-p).normalized();
+        Ray p_to_light = Ray(p,w_o);
+
+        IntersectionInfo i;
+        if (scene.getIntersection(p_to_light, &i)) {
+            const Triangle *t = static_cast<const Triangle *>(i.data);
+
+            if (t->getIndex() == light->getIndex()) {
+                L_direct += directLight(light,i,w_i,w_o,normal,brdf);
+            }
+        }
+    }
+    return L_direct;
+}
+
 
 
 

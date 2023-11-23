@@ -16,6 +16,17 @@ Triangle::Triangle(Vector3f v1, Vector3f v2, Vector3f v3, Vector3f n1, Vector3f 
     _bbox.expandToInclude(_v2);
     _bbox.expandToInclude(_v3);
 }
+float Triangle::getArea() const {
+    std::vector<Eigen::Vector3f> verts = std::vector{_v1,_v2,_v3};
+    Eigen::Vector3f ba = verts[1]-verts[0];
+    Eigen::Vector3f ca = verts[2]-verts[0];
+    return 0.5f*(ba.cross(ca).norm());
+}
+
+bool Triangle::isEmissive() const {
+    Vector3f e = Vector3f(m_material.emission);
+    return e.norm() > 1.f;
+}
 
 bool Triangle::getIntersection(const Ray &ray, IntersectionInfo *intersection) const
 {
