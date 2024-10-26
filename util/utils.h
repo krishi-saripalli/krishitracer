@@ -15,9 +15,9 @@
 using namespace Eigen;
 
 //initializes RNG
-std::random_device randdev;
-std::mt19937 generator(randdev());
-std::uniform_real_distribution<> distrib(0.0, 1.0);
+thread_local std::random_device randdev;
+thread_local std::mt19937 generator(randdev());
+thread_local std::uniform_real_distribution<> distrib(0.0, 1.0);
 
 
 // Returns a random floating point number between 0.0 and 1.0 uniformly

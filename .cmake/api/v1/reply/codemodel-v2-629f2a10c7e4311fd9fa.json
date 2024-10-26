@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "path",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "path::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-path-Release-0cd00a501177b5d6dbbd.json",
+					"name" : "path",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "path_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-path_autogen-Release-d4de79e34220867dab65.json",
+					"name" : "path_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "path_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-path_autogen_timestamp_deps-Release-b633662beadf420688f4.json",
+					"name" : "path_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/saripallikrishi/projects/misc/path-krishi-saripalli",
+		"source" : "/Users/saripallikrishi/projects/misc/path-krishi-saripalli"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

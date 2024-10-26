@@ -1,0 +1,5 @@
+/Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/path.dir
+/Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/edit_cache.dir
+/Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/rebuild_cache.dir
+/Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/path_autogen_timestamp_deps.dir
+/Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/path_autogen.dir

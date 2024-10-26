@@ -211,11 +211,15 @@ Vector3f BRDF( const BRDF_TYPE brdfType , const Vector3f w_i, const Vector3f w_o
         return   (1.0f-t)*Vector3f(d[0],d[1],d[2])/M_PI + t*Vector3f(s[0],s[1],s[2])* (mat.shininess + 2/(2.0f*M_PI))*powf(cosine,mat.shininess);
         break;
       case BRDF_MIRROR:
-        //TODO: Look at the 1/cos(theta) constant to multiply here and understand if we need to add it
         return (1.0f/reflection.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
 
       case BRDF_DIELECTRIC:
-         return prob*(1.0f/w_o.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
+         if (w_o.isApprox(reflection)) {
+             return prob*(1.0f/w_o.dot(normal))*Vector3f(1.0f,1.0f,1.0f);
+         }
+        return prob*(1.0f/w_o.dot(normal))*Vector3f(1.0f,1.0f,1.0f).cwiseProduct(Vector3f(mat.transmittance));
+
+
       default:
         return Vector3f(d[0],d[1],d[2])/M_PI;
 

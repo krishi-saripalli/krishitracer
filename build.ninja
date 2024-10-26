@@ -1,0 +1,297 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: path
+# Configurations: Release
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Release
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/saripallikrishi/projects/misc/path-krishi-saripalli/
+# =============================================================================
+# Object build statements for EXECUTABLE target path
+
+
+#############################################
+# Order-only phony target for path
+
+build cmake_object_order_depends_target_path: phony || path_autogen path_autogen/mocs_compilation.cpp path_autogen/timestamp path_autogen_timestamp_deps
+
+build CMakeFiles/path.dir/path_autogen/mocs_compilation.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/path_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/path_autogen
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/main.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/main.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/main.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/pathtracer.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/pathtracer.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/pathtracer.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/scene/scene.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/scene/scene.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/scene/scene.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/scene
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/BVH/BBox.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/BVH/BBox.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/BVH/BBox.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/BVH
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/BVH/BVH.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/BVH/BVH.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/BVH/BVH.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/BVH
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/scene/camera.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/scene/camera.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/scene/camera.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/scene
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/scene/basiccamera.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/scene/basiccamera.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/scene/basiccamera.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/scene
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/util/CS123XmlSceneParser.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/util/CS123XmlSceneParser.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/util/CS123XmlSceneParser.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/util
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/scene/shape/mesh.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/scene/shape/mesh.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/scene/shape/mesh.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/scene/shape
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/scene/shape/triangle.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/scene/shape/triangle.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/scene/shape/triangle.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/scene/shape
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+build CMakeFiles/path.dir/solver/solver.cpp.o: CXX_COMPILER__path_Release /Users/saripallikrishi/projects/misc/path-krishi-saripalli/solver/solver.cpp || cmake_object_order_depends_target_path
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_XML_LIB
+  DEP_FILE = CMakeFiles/path.dir/solver/solver.cpp.o.d
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -std=gnu++20
+  INCLUDES = -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/include -I/Users/saripallikrishi/projects/misc/path-krishi-saripalli/Eigen -iframework /Users/saripallikrishi/Qt/6.2.4/macos/lib -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/mkspecs/macx-clang -isystem /Users/saripallikrishi/Qt/6.2.4/macos/include -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Headers -isystem /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Headers
+  OBJECT_DIR = CMakeFiles/path.dir
+  OBJECT_FILE_DIR = CMakeFiles/path.dir/solver
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_PDB = path.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target path
+
+
+#############################################
+# Link the executable path
+
+build path: CXX_EXECUTABLE_LINKER__path_Release CMakeFiles/path.dir/path_autogen/mocs_compilation.cpp.o CMakeFiles/path.dir/main.cpp.o CMakeFiles/path.dir/pathtracer.cpp.o CMakeFiles/path.dir/scene/scene.cpp.o CMakeFiles/path.dir/BVH/BBox.cpp.o CMakeFiles/path.dir/BVH/BVH.cpp.o CMakeFiles/path.dir/scene/camera.cpp.o CMakeFiles/path.dir/scene/basiccamera.cpp.o CMakeFiles/path.dir/util/CS123XmlSceneParser.cpp.o CMakeFiles/path.dir/scene/shape/mesh.cpp.o CMakeFiles/path.dir/scene/shape/triangle.cpp.o CMakeFiles/path.dir/solver/solver.cpp.o | /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Versions/A/QtGui /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Versions/A/QtXml /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Versions/A/QtCore || path_autogen path_autogen_timestamp_deps
+  FLAGS = -Wno-deprecated-volatile -O3 -DNDEBUG -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/Users/saripallikrishi/Qt/6.2.4/macos/lib  /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtGui.framework/Versions/A/QtGui  -framework  OpenGL  -framework  AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtXml.framework/Versions/A/QtXml  /Users/saripallikrishi/Qt/6.2.4/macos/lib/QtCore.framework/Versions/A/QtCore  -framework DiskArbitration  -framework IOKit
+  OBJECT_DIR = CMakeFiles/path.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/path.dir/
+  TARGET_FILE = path
+  TARGET_PDB = path.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/saripallikrishi/projects/misc/path-krishi-saripalli && /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/bin/ccmake -S/Users/saripallikrishi/projects/misc/path-krishi-saripalli -B/Users/saripallikrishi/projects/misc/path-krishi-saripalli
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/saripallikrishi/projects/misc/path-krishi-saripalli && /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/saripallikrishi/projects/misc/path-krishi-saripalli -B/Users/saripallikrishi/projects/misc/path-krishi-saripalli
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for path_autogen_timestamp_deps
+
+build path_autogen_timestamp_deps: phony CMakeFiles/path_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for path_autogen
+
+build path_autogen: phony CMakeFiles/path_autogen path_autogen/timestamp path_autogen/mocs_compilation.cpp path_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for path_autogen/timestamp
+
+build path_autogen/timestamp path_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}path_autogen/timestamp ${cmake_ninja_workdir}path_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/saripallikrishi/Qt/6.2.4/macos/./libexec/moc || path_autogen_timestamp_deps
+  COMMAND = cd /Users/saripallikrishi/projects/misc/path-krishi-saripalli && /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/path_autogen.dir/AutogenInfo.json Release && /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/timestamp && /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/saripallikrishi/projects/misc/path-krishi-saripalli /Users/saripallikrishi/projects/misc/path-krishi-saripalli /Users/saripallikrishi/projects/misc/path-krishi-saripalli /Users/saripallikrishi/projects/misc/path-krishi-saripalli /Users/saripallikrishi/projects/misc/path-krishi-saripalli/path_autogen/deps /Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/d/955e0c2dcc23c66de8895bd634c6b8d51100fc1e0c6228ef41a4d4fed8cb97f4.d
+  DESC = Automatic MOC and UIC for target path
+  depfile = /Users/saripallikrishi/projects/misc/path-krishi-saripalli/CMakeFiles/d/955e0c2dcc23c66de8895bd634c6b8d51100fc1e0c6228ef41a4d4fed8cb97f4.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/path_autogen_timestamp_deps
+
+build CMakeFiles/path_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/path_autogen_timestamp_deps: phony /Users/saripallikrishi/Qt/6.2.4/macos/./libexec/moc
+
+
+#############################################
+# Phony custom command for CMakeFiles/path_autogen
+
+build CMakeFiles/path_autogen | ${cmake_ninja_workdir}CMakeFiles/path_autogen: phony path_autogen/timestamp || path_autogen_timestamp_deps
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/saripallikrishi/projects/misc/path-krishi-saripalli
+
+build all: phony path
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtFeature.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake /Users/saripallikrishi/Qt/Qt$ Creator.app/Contents/Resources/package-manager/auto-setup.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeNinjaFindMake.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cxx.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindOpenGL.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckFlagCommonConfig.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/MacroAddFileDependencies.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtFeature.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlAdditionalTargetInfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfig.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlConfigVersionImpl.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlDependencies.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake /Users/saripallikrishi/Qt/6.2.4/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake /Users/saripallikrishi/Qt/Qt$ Creator.app/Contents/Resources/package-manager/auto-setup.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeNinjaFindMake.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cxx.in /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFileCXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindOpenGL.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckFlagCommonConfig.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/MacroAddFileDependencies.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/saripallikrishi/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake CMakeLists.txt: phony
+
+
+#############################################
+# Clean additional files.
+
+build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
+  CONFIG = Release
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN CMakeFiles/clean.additional
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
