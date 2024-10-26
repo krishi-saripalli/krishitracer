@@ -1,6 +1,6 @@
 # krishitracer
 
-### A CPU implementation of a physically-based renderer implementing Monte Carlo pathtracing.
+### A CPU only physically-based renderer implemented with Monte Carlo pathtracing.
 
 Glass
 
